@@ -27,35 +27,14 @@ jobs:
           wget https://github.com/hk-modding/api/releases/latest/download/moddingapi.v77.windows.zip -O API.zip
           unzip -o API.zip -d References
 
-      - name: Fetch ItemChanger
+      - name: Fetch mod dependencies
         run: |
-          wget https://github.com/homothetyhk/HollowKnight.ItemChanger/releases/latest/download/ItemChanger.zip -O ItemChanger.zip
-          unzip -o ItemChanger.zip -d References
-
-      - name: Fetch RandomizerMod
-        run: |
-          wget https://github.com/homothetyhk/RandomizerMod/releases/latest/download/RandomizerMod.zip -O RandomizerMod.zip
-          unzip -o RandomizerMod.zip -d References
-
-      - name: Fetch MenuChanger
-        run: |
-          wget https://github.com/homothetyhk/HollowKnight.MenuChanger/releases/latest/download/MenuChanger.zip -O MenuChanger.zip
-          unzip -o MenuChanger.zip -d References
-
-      - name: Fetch RandoMapCore
-        run: |
-          wget https://github.com/syyePhenomenol/RandoMapCore/releases/latest/download/RandoMapCore.zip -O RandoMapCore.zip
-          unzip -o RandoMapCore.zip -d References
-
-      - name: Fetch RandoMapMod
-        run: |
-          wget https://github.com/syyePhenomenol/RandoMapMod/releases/latest/download/RandoMapMod.zip -O RandoMapMod.zip
-          unzip -o RandoMapMod.zip -d References
-
-      - name: Fetch RandoSettingsManager
-        run: |
-          wget https://github.com/BadMagic100/RandoSettingsManager/releases/latest/download/RandoSettingsManager.zip -O RandoSettingsManager.zip
-          unzip -o RandoSettingsManager.zip -d References
+          fetch() { wget -q "$2" -O dep.zip && unzip -o dep.zip -d "References/Mods/$1" && rm dep.zip; }
+          fetch "ItemChanger"          "https://github.com/homothetyhk/HollowKnight.ItemChanger/releases/download/v2.1.6%2B927/ItemChanger.zip"
+          fetch "MenuChanger"          "https://github.com/homothetyhk/HollowKnight.MenuChanger/releases/download/v1.1.0%2B132/MenuChanger.zip"
+          fetch "RandomizerCore"       "https://github.com/homothetyhk/RandomizerCore/releases/download/v2.1.2/RandomizerCore.zip"
+          fetch "Randomizer 4"         "https://github.com/homothetyhk/RandomizerMod/releases/download/v4.1.6%2B987/RandomizerMod.zip"
+          fetch "RandoSettingsManager" "https://github.com/BadMagic100/RandoSettingsManager/releases/download/v1.2.8489.20/RandoSettingsManager.zip"
 
       - name: Setup .NET
         uses: actions/setup-dotnet@v4
@@ -67,11 +46,11 @@ jobs:
 
       - name: Get SHA256 of zipped mod
         id: get_hash
-        run: echo "hash=$(sha256sum Output/ItemReveal.zip | cut -d ' ' -f 1)" >> "GITHUB_OUTPUT"
+        run: echo "hash=$(sha256sum Output/ItemReveal.zip | cut -d ' ' -f 1)" >> "$GITHUB_OUTPUT"
 
       - name: Get Assembly version
         id: get_version
-        run: echo "::set-output name=version::$(cat < Version.txt)"
+        run: echo "version=$(tr -dc '0-9.' < Version.txt)" >> "$GITHUB_OUTPUT"
 
       - name: Create release
         if: startsWith(github.ref, 'refs/tags/')

@@ -37,6 +37,8 @@
     <WarningLevel>4</WarningLevel>
     <!-- Path to DLL references required to build mod -->
     <LocalRefs>References</LocalRefs>
+	<!-- Path to Mods folder -->
+	<ModsPath>References/Mods</ModsPath>
     <!-- The folder that exports will be generated in -->
     <ExportDir>Output</ExportDir>
   </PropertyGroup>
@@ -106,10 +108,6 @@
     <Reference Include="PlayMaker">
       <HintPath>$(LocalRefs)/PlayMaker.dll</HintPath>
     </Reference>
-    <Reference Include="RandoMapCore">
-      <HintPath>..\..\..\..\..\..\..\Program Files (x86)\Steam\steamapps\common\Hollow Knight\hollow_knight_Data\Managed\Mods\RandoMapCore\RandoMapCore.dll</HintPath>
-      <Private>False</Private>
-    </Reference>
     <Reference Include="RandomizerCore">
       <HintPath>$(ModsPath)\RandomizerCore\RandomizerCore.dll</HintPath>
       <Private>False</Private>
@@ -119,7 +117,7 @@
       <Private>False</Private>
     </Reference>
     <Reference Include="RandoSettingsManager">
-      <HintPath>..\..\..\..\..\..\..\Program Files (x86)\Steam\steamapps\common\Hollow Knight\hollow_knight_Data\Managed\Mods\RandoSettingsManager\RandoSettingsManager.dll</HintPath>
+      <HintPath>$(ModsPath)\RandoSettingsManager\RandoSettingsManager.dll</HintPath>
       <Private>False</Private>
     </Reference>
     <Reference Include="System.ComponentModel.Composition">
