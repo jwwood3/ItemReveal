@@ -4,6 +4,7 @@ using RandomizerMod.RC;
 using System.IO;
 using ItemChanger;
 using System.Collections.Generic;
+using System.Reflection;
 
 namespace ItemReveal;
 
@@ -13,6 +14,8 @@ public class ItemReveal : Mod, IGlobalSettings<IRSettings>
     {
         Instance = this;
     }
+
+    internal static Assembly Assembly { get; } = Assembly.GetExecutingAssembly();
     internal static ItemReveal Instance { get; private set; }
     internal static IRSettings GS { get; private set; } = new();
 
@@ -28,7 +31,7 @@ public class ItemReveal : Mod, IGlobalSettings<IRSettings>
 
     public override string GetVersion()
     {
-        return "0.0.1";
+        return Assembly.GetName().Version.ToString();
     }
 
     public override int LoadPriority()

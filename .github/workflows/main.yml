@@ -23,11 +23,36 @@ jobs:
           wget https://github.com/hk-modding/api/releases/latest/download/ModdingApiWin.zip -O API.zip
           unzip -o API.zip -d References
 
-      # - name: Fetch a dependency
-      #   run: |
-      #     wget {dependencyLink} -O {dependencyName}.zip
-      #     unzip -o {dependencyName}.zip -d References
-          
+      - name: Fetch ItemChanger
+        run: |
+          wget https://github.com/homothetyhk/HollowKnight.ItemChanger/releases/latest/download/ItemChanger.zip -O ItemChanger.zip
+          unzip -o ItemChanger.zip -d References
+
+      - name: Fetch RandomizerMod
+        run: |
+          wget https://github.com/homothetyhk/RandomizerMod/releases/latest/download/RandomizerMod.zip -O RandomizerMod.zip
+          unzip -o RandomizerMod.zip -d References
+
+      - name: Fetch MenuChanger
+        run: |
+          wget https://github.com/homothetyhk/HollowKnight.MenuChanger/releases/latest/download/MenuChanger.zip -O MenuChanger.zip
+          unzip -o MenuChanger.zip -d References
+
+      - name: Fetch RandoMapCore
+        run: |
+          wget https://github.com/syyePhenomenol/RandoMapCore/releases/latest/download/RandoMapCore.zip -O RandoMapCore.zip
+          unzip -o RandoMapCore.zip -d References
+
+      - name: Fetch RandoMapMod
+        run: |
+          wget https://github.com/syyePhenomenol/RandoMapMod/releases/latest/download/RandoMapMod.zip -O RandoMapMod.zip
+          unzip -o RandoMapMod.zip -d References
+
+      - name: Fetch RandoSettingsManager
+        run: |
+          wget https://github.com/BadMagic100/RandoSettingsManager/releases/latest/download/RandoSettingsManager.zip -O RandoSettingsManager.zip
+          unzip -o RandoSettingsManager.zip -d References
+
       - name: Setup MSBuild
         run: sudo apt-get install -y nuget mono-devel mono-xbuild
 
