@@ -29,7 +29,7 @@ jobs:
 
       - name: Fetch mod dependencies
         run: |
-          fetch() { mkdir -p "References/Mods/$1" &&wget -q "$2" -O dep.zip && unzip -o dep.zip -d "References/Mods/$1" && rm dep.zip; }
+          fetch() { mkdir -p "References/Mods/$1" && wget -q "$2" -O dep.zip && unzip -o dep.zip -d "References/Mods/$1" && rm dep.zip; }
           fetch "ItemChanger"          "https://github.com/homothetyhk/HollowKnight.ItemChanger/releases/download/v2.1.6%2B927/ItemChanger.zip"
           fetch "MenuChanger"          "https://github.com/homothetyhk/HollowKnight.MenuChanger/releases/download/v1.1.0%2B132/MenuChanger.zip"
           fetch "RandomizerCore"       "https://github.com/homothetyhk/RandomizerCore/releases/download/v2.1.2/RandomizerCore.zip"
