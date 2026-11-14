@@ -8,8 +8,8 @@
     <Product>ItemReveal</Product>
     <Description>A Hollow Knight mod.</Description>
     <Copyright>Copyright © </Copyright>
-    <AssemblyVersion>0.0.1.0</AssemblyVersion>
-    <FileVersion>0.0.1.0</FileVersion>
+    <AssemblyVersion>0.0.2.0</AssemblyVersion>
+    <FileVersion>0.0.2.0</FileVersion>
     <OutputPath>bin\$(Configuration)\</OutputPath>
     <LangVersion>latest</LangVersion>
   </PropertyGroup>
@@ -77,6 +77,10 @@
       <HintPath>$(ModsPath)\ItemChanger\ItemChanger.dll</HintPath>
       <Private>False</Private>
     </Reference>
+    <Reference Include="MapChanger">
+      <HintPath>$(ModsPath)\MapChanger\MapChanger.dll</HintPath>
+	  <Private>False</Private>
+    </Reference>
     <Reference Include="MenuChanger">
       <HintPath>$(ModsPath)\MenuChanger\MenuChanger.dll</HintPath>
       <Private>False</Private>
@@ -107,6 +111,10 @@
     </Reference>
     <Reference Include="PlayMaker">
       <HintPath>$(LocalRefs)/PlayMaker.dll</HintPath>
+    </Reference>
+    <Reference Include="RandoMapCore">
+      <HintPath>$(ModsPath)\RandoMapCore\RandoMapCore.dll</HintPath>
+      <Private>False</Private>
     </Reference>
     <Reference Include="RandomizerCore">
       <HintPath>$(ModsPath)\RandomizerCore\RandomizerCore.dll</HintPath>
