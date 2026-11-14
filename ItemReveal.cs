@@ -53,7 +53,7 @@ public class ItemReveal : Mod, IGlobalSettings<IRSettings>
         RandoController.OnExportCompleted += OnExport;
         RandoController.OnCalculateHash += AdjustHash;
         SettingsLog.AfterLogSettings += LogIRSettings;
-        MapChanger.InputManager.Add(new FilterPreviewInput());
+        MapChanger.InputManager.Add(new RevealButtonInput());
 
         if (ModHooks.GetMod("RandoSettingsManager") is not null)
         {
