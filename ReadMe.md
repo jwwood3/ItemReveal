@@ -12,8 +12,20 @@ Randomizer 4, RandomizerCore, ItemChanger, MenuChanger, RandoMapMod, RandoMapCor
 
 This mod adds a new button to the connections menu in Randomizer 4. Clicking the "ItemReveal" button opens a menu with the global toggle for the mod, as well as buttons for each major item pool.
 
+![Screenshots/ConnectionsMenu.png](Screenshots/ConnectionsMenu.png)
+
+![Screenshots/ItemRevealMenu.png](Screenshots/ItemRevealMenu.png)
+
 Navigating through these pages you can toggle on any items you want to reveal at the start of a randomizer 4 save. The mod will then automatically reveal the locations of those items on the map when you start a new game.
 
-Inside game, after activating RandoMapMod in the pause menu (Ctrl-M), you can open the map and see the revealed locations highlighted in a green diamond. 
-By holding the jump button for 0.3 seconds, you can filter the map to only show the revealed item pins to make them easier to find. Holding jump for an additional 0.3 seconds removes the filter. 
+![Screenshots/SkillsMenu.png](Screenshots/SkillsMenu.png)
+
+Inside game, after activating RandoMapMod in the pause menu (Ctrl-M), you can open the map and see the revealed locations highlighted in a green diamond.
+
+![Screenshots/PinMap.png](Screenshots/PinMap.png)
+
+By holding the jump button for 0.3 seconds, you can filter the map to only show the revealed item pins to make them easier to find. Holding jump for an additional 0.3 seconds removes the filter.
+
 Tapping the jump button will cycle through panning to each revealed item pin.
+
+![Screenshots/FilteredPinMap.png](Screenshots/FilteredPinMap.png)
