@@ -1,8 +1,8 @@
 # ItemReveal
 
-A Hollow Knight mod that allows you to reveal the location of specific items on the map at the start of a randomizer 4 save.
+A Hollow Knight mod that allows you to reveal the location of specific items on the map at the start of a Randomizer 4 save.
 
-I designed this primarily to reduce variance in bingo races (randomly finding mantis claw first is a game breaking advantage), but it can also be used to make randomizer 4 more accessible for new players or just easier in general.
+I designed this primarily to reduce variance in bingo races (randomly finding mantis claw first is a game breaking advantage), but it can also be used to make Randomizer 4 more accessible for new players or just easier in general.
 
 ## Dependencies
 
@@ -16,7 +16,7 @@ This mod adds a new button to the connections menu in Randomizer 4. Clicking the
 
 ![Screenshots/ItemRevealMenu.png](Screenshots/ItemRevealMenu.png)
 
-Navigating through these pages you can toggle on any items you want to reveal at the start of a randomizer 4 save. The mod will then automatically reveal the locations of those items on the map when you start a new game.
+Navigating through these pages you can toggle on any items you want to reveal at the start of a Randomizer 4 save. The mod will then automatically reveal the locations of those items on the map when you start a new game.
 
 ![Screenshots/SkillsMenu.png](Screenshots/SkillsMenu.png)
 
@@ -29,3 +29,7 @@ By holding the jump button for 0.3 seconds, you can filter the map to only show 
 Tapping the jump button will cycle through panning to each revealed item pin.
 
 ![Screenshots/FilteredPinMap.png](Screenshots/FilteredPinMap.png)
+
+## AI Declaration
+
+Claude Code was used as a guide for this project. I've never made a mod before and I used it to help me understand the existing code in RandoMapMod and RandoMapCore by syyePhenomenol on which I heavily based my mod's structure. It's very important to me that I continue to learn and improve and asking "write this mod for me" doesn't help with that, so I didn't do it. Some small sections here were written by the AI, but less and less as I learn how to do everything myself.
