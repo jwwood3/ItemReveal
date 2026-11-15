@@ -33,6 +33,7 @@ public class IRMenuPage
         foreach (string group in itemGroups.Keys)
         {
             var groupPage = new MenuPage(group, _itemPage);
+            var titleBox = new VerticalItemPanel(groupPage, new(0, 350), 75f, true, [new MenuLabel(groupPage, group)]);
             _groupPages[group] = groupPage;
             var buttons = itemGroups[group].Select(name =>
             {
@@ -46,7 +47,7 @@ public class IRMenuPage
                 itemButtons.Add(name, b);
                 return b;
             }).ToArray();
-            new MultiGridItemPanel(groupPage, 5, 3, 60f, 650f, new UnityEngine.Vector2(0, 300), buttons);
+            new MultiGridItemPanel(groupPage, 5, 3, 60f, 650f, new UnityEngine.Vector2(0, 250), buttons);
             var groupPageButton = new SmallButton(_itemPage, group);
             groupPageButton.AddHideAndShowEvent(_itemPage, groupPage);
             groupButtons.Add(groupPageButton);
