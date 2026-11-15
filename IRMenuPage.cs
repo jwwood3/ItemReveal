@@ -53,7 +53,7 @@ public class IRMenuPage
         }
         _jumpButton = new SmallButton(landingPage, "ItemReveal");
         _jumpButton.AddHideAndShowEvent(landingPage, _itemPage);
-        _mgip = new MultiGridItemPanel(_itemPage, 5, 3, 60f, 650f, new UnityEngine.Vector2(0, 250), groupButtons.ToArray());
+        _mgip = new MultiGridItemPanel(_itemPage, 5, 3, 60f, 650f, new UnityEngine.Vector2(0, 200), groupButtons.ToArray());
     }
 
     private Dictionary<string, List<string>> ItemGroups()
