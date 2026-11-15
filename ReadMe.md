@@ -2,15 +2,15 @@
 
 A Hollow Knight mod that allows you to reveal the location of specific items on the map at the start of a Randomizer 4 save.
 
-I designed this primarily to reduce variance in bingo races (randomly finding mantis claw first is a game breaking advantage), but it can also be used to make Randomizer 4 more accessible for new players or just easier in general.
+I designed this primarily to reduce variance in randomized bingo races (randomly finding mantis claw first can be a game breaking advantage), but it can also be used to make Randomizer 4 more accessible for new players or just easier in general.
 
 ## Dependencies
 
-Randomizer 4, RandomizerCore, ItemChanger, MenuChanger, RandoMapMod, RandoMapCore, RandoSettingsManager
+Randomizer 4, RandomizerCore, ItemChanger, MapChanger, MenuChanger, RandoMapMod, RandoMapCore, RandoSettingsManager
 
 ## Usage
 
-This mod adds a new button to the connections menu in Randomizer 4. Clicking the "ItemReveal" button opens a menu with the global toggle for the mod, as well as buttons for each major item pool.
+This mod adds a new button to the connections menu in Randomizer 4. Clicking the "ItemReveal" button opens a menu with the global toggle for the mod, a toggle for revealing all copies of the items rather than just one, as well as links to pages for each major item pool.
 
 ![Screenshots/ConnectionsMenu.png](Screenshots/ConnectionsMenu.png)
 

@@ -13,6 +13,9 @@ public class IRSettings
     public bool EnableItemReveal { get; set; } = false;
 
     [JsonProperty]
+    public bool RevealAllDuplicates { get; set; } = true;
+
+    [JsonProperty]
     [MenuIgnore]
     public HashSet<string> RevealedItems { get; set; } = new();
 
