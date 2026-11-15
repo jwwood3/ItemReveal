@@ -68,6 +68,7 @@ public class ItemReveal : Mod, IGlobalSettings<IRSettings>
         if (!GS.EnableItemReveal) return;
         var m = ItemChangerMod.Modules.GetOrAdd<IRModule>();
         m.RevealedItems = new HashSet<string>(GS.RevealedItems);
+        m.RevealAllDuplicates = GS.RevealAllDuplicates;
     }
 
     private static int AdjustHash(RandoController rc, int orig)
