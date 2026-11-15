@@ -25,6 +25,7 @@ public class IRMenuPage
     {
         _itemPage = new MenuPage("ItemReveal Selector", landingPage);
         Mef = new(_itemPage, ItemReveal.GS);
+        // Holds Enable and Duplicate settings
         _vip = new(_itemPage, new(0, 350), 75f, true, Mef.Elements);
         itemButtons = new Dictionary<string, ToggleButton>();
         _groupPages = new Dictionary<string, MenuPage>();
@@ -33,6 +34,7 @@ public class IRMenuPage
         foreach (string group in itemGroups.Keys)
         {
             var groupPage = new MenuPage(group, _itemPage);
+            // Holds item pool title
             var titleBox = new VerticalItemPanel(groupPage, new(0, 350), 75f, true, [new MenuLabel(groupPage, group)]);
             _groupPages[group] = groupPage;
             var buttons = itemGroups[group].Select(name =>
@@ -47,14 +49,16 @@ public class IRMenuPage
                 itemButtons.Add(name, b);
                 return b;
             }).ToArray();
-            new MultiGridItemPanel(groupPage, 5, 3, 60f, 650f, new UnityEngine.Vector2(0, 250), buttons);
+            // Holds all items in the pool
+            new MultiGridItemPanel(groupPage, 8, 4, 60f, 350f, new UnityEngine.Vector2(0, 250), buttons);
             var groupPageButton = new SmallButton(_itemPage, group);
             groupPageButton.AddHideAndShowEvent(_itemPage, groupPage);
             groupButtons.Add(groupPageButton);
         }
         _jumpButton = new SmallButton(landingPage, "ItemReveal");
         _jumpButton.AddHideAndShowEvent(landingPage, _itemPage);
-        _mgip = new MultiGridItemPanel(_itemPage, 5, 3, 60f, 650f, new UnityEngine.Vector2(0, 200), groupButtons.ToArray());
+        // Holds links to item pool pages
+        _mgip = new MultiGridItemPanel(_itemPage, 4, 4, 60f, 350f, new UnityEngine.Vector2(0, 200), groupButtons.ToArray());
     }
 
     private Dictionary<string, List<string>> ItemGroups()
